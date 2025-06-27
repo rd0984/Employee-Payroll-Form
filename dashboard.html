@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="headerbox">
+      <div class="logo">
+        <img src="https://img.icons8.com/ios-filled/50/82A70C/employee-card.png" alt="Logo" class="logo-img" />
+        <div class="textbox">         
+          <span class="headerEMPLOYEE">EMPLOYEE</span><br>
+          <span class="headerPAYROLL">PAYROLL</span> 
+        </div> 
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="header-row">
+      <h2>Employee Details</h2>
+      <div class="actions">
+        <button class="search-toggle-btn">
+          <img src="https://img.icons8.com/ios-filled/24/search.png" alt="Search Icon"/>
+        </button>
+        <input type="text" placeholder="Search..." class="search-box" />
+        <button class="add-user-btn" onclick="localStorage.removeItem('editId'); location.href='empform.html'">+ Add User</button>
+      </div>
+    </div>
+
+    <div class="total-table">
+      <table class="employee-table">
+        <thead>
+          <tr>
+            <th>NAME</th>
+            <th>GENDER</th>
+            <th>DEPARTMENT</th>
+            <th>SALARY</th>
+            <th>START DATE</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody id="employee-data">
+          <!-- Rows injected using jQuery -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    $(document).ready(function () {
+      const apiUrl = "http://localhost:3002/employee";
+
+      // Toggle search bar
+      $('.search-toggle-btn').on('click', function () {
+        $('.search-box').toggleClass('visible').focus();
+      });
+
+      // Load all employees
+      function loadEmployees() {
+        $.get(apiUrl, function (employees) {
+          const table = $('#employee-data');
+          table.empty();
+
+          if (employees.length === 0) {
+            table.append('<tr><td colspan="6" style="text-align:center;">No employees found</td></tr>');
+            return;
+          }
+
+          employees.forEach((emp) => {
+            const row = `
+              <tr>
+                <td><img src="${emp.profile}" class="profile-img" /> ${emp.name}</td>
+                <td>${emp.gender}</td>
+                <td>${emp.department.map(dep => `<span class="department-label">${dep}</span>`).join(' ')}</td>
+                <td>${emp.salary}</td>
+                <td>${emp.startdate}</td>
+                <td>
+                  <img src="https://img.icons8.com/material-outlined/24/000000/trash--v1.png"
+                       class="action-icon delete-btn"
+                       data-id="${emp.id}" alt="Delete" />
+                  <img src="https://img.icons8.com/material-outlined/24/000000/edit--v1.png"
+                       class="action-icon edit-btn"
+                       data-id="${emp.id}" alt="Edit" />
+                </td>
+              </tr>
+            `;
+            table.append(row);
+          });
+        });
+      }
+
+      // Load on page load
+      loadEmployees();
+
+      // Search filter
+      $('.search-box').on('input', function () {
+        const keyword = $(this).val().toLowerCase();
+        $('#employee-data tr').each(function () {
+          const name = $(this).find('td').eq(0).text().toLowerCase();
+          $(this).toggle(name.includes(keyword));
+        });
+      });
+
+      // Delete employee
+      $(document).on("click", ".delete-btn", function () {
+        const id = $(this).data("id");
+
+        if (confirm("Are you sure you want to delete this employee?")) {
+          $.ajax({
+            url: `${apiUrl}/${id}`,
+            type: "DELETE",
+            success: function () {
+              loadEmployees(); // Refresh table
+            },
+            error: function () {
+              alert("Failed to delete employee.");
+            }
+          });
+        }
+      });
+
+      // Edit employee
+      $(document).on("click", ".edit-btn", function () {
+        const id = $(this).data("id");
+        localStorage.setItem("editId", id);
+        location.href = "empform.html";
+      });
+    });
+  </script>
+</body>
+</html>

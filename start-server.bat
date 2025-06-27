@@ -1,0 +1,6 @@
+@echo off
+echo Killing any process using port 3002...
+for /f "tokens=5" %%a in ('netstat -aon ^| find ":3002" ^| find "LISTENING"') do taskkill /F /PID %%a
+echo Starting JSON Server on port 3002...
+npx json-server --watch db.json --port 3002
+pause

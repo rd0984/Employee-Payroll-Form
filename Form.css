@@ -1,0 +1,348 @@
+
+  .flex-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F7F7;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+    background-color: white;  
+  }
+  
+
+  .inner-container {
+    position: absolute;
+    top: 133px;
+    left: 397px;
+    width: 1126px;
+    height: 911px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #F5F5F5;
+    border-radius: 8px;
+    opacity: 1;
+  }
+ 
+  .head-child
+  {
+    width: 100%;
+  }
+
+  
+  .title {
+    text-align: left;
+    color: #42515F;
+    font-size: 28px;
+    padding-left: 149px;
+    margin-top: 20px;
+  }
+/* -------------------------------------------------------------------- */
+  .one {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+  }
+  #id1{
+      width: 25%;
+  }
+
+  .label1{
+    width: 50%;
+    text-align: left;
+    font-size: 24px;
+    color: #42515F;
+    padding-left: 149px
+    
+  }
+  #id2{
+    width: 70%;
+  }
+  .input1{
+    width: 80%;
+    top: 252px;
+    left: 688px;
+    width: 686px;
+    height: 50px;
+    font-size: 24px; 
+  }
+/* ------------------------------------------------------------ */
+ .two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 45px;
+ }
+#id3{
+    width: 25%;
+}
+  .label2- {
+    width: 50%;
+    text-align: left;
+    font-size: 21px;
+    color: #42515F;
+    padding-left: 149px;
+  }
+#id4 {
+    width: 70%;
+}
+   .lable2--{
+    width: 80%;
+    display: flex;
+   }
+   .radio-profile {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* space between radio and image */
+    margin-right: 42px; /* optional: space between radio-image pairs */
+  }
+  
+  .radio-profile input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .radio-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 80%; /* optional: make it round */
+  }
+  /* --------------------------------------------------------------- */
+   .three{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+    font-size: 24px;
+ }
+
+  #id5{
+    width: 25%;
+  }
+  #id6{
+    width: 70%;
+  }
+
+
+  .label3-{
+    width: 50%;
+    text-align: left;
+    color: #42515F;
+    padding-left: 149px
+  }
+  .label3--{
+    width: 80%;
+    font-size: 24px;
+    color: #42515F;
+  }
+  .label3-- input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+/* ------------------------------------------------------------------------- */
+  .four{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+    
+ }
+
+#id7{
+    width: 25%;
+}
+#id8{
+    width: 70%;
+}
+.label4-{
+    width: 50%;
+    text-align: left;
+    font-size: 24px;
+    color: #42515F;
+    padding-left: 149px
+}
+
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.dept-label {
+  display: inline-block;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 20px; /* space between label sets */
+  vertical-align: middle;
+}
+
+.label4--{
+    width: 80%;
+    width: 44px;
+    height: 24px;
+    font-size: 24px;
+    color: #42515F;
+
+}
+
+/* -------------------------------------------------------------- */
+.five{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+}
+#id9 {
+    width: 25%;
+}
+#id10 {
+    width: 70%;
+}
+ .label5-{
+    width: 50%;
+    text-align: left;
+    font-size: 24px;
+    color: #42515F;
+    padding-left: 149px
+ }
+ .label5--{
+    width: 80%;
+    width: 341px;
+    height: 50px; 
+ }
+ .salary-select option {
+  padding: 8px;
+}
+
+ .salary-select {
+  width: 341px;
+  height: 50px;
+  font-size: 16px;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #42515F;
+}
+.placeholder-option {
+  display: inline-block;
+  width: 103px;
+  height: 24px;
+  line-height: 24px;
+}
+/* -------------------------------------------------------------------------- */
+.six{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+    
+}
+
+#id11{
+    width: 25%;
+}
+#id12{
+    width: 70%;
+}
+.label6-{
+    width: 50%;
+    text-align: left;
+    font-size: 24px;
+    color: #42515F;
+    padding-left: 149px
+}
+.start-date-container {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap; 
+}
+.date-input {
+  width: 163px;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #42515F;
+}
+.label6--{
+    width: 80%;
+}
+/* ----------------------------------------------------------------------- */
+.seven{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+}
+#id13{
+    width: 25%;
+}
+#id14{
+    width: 70%;
+}
+.label7-{
+    width: 50%;
+    text-align: left;
+    font-size: 24px;
+    color: #42515F;
+    padding-left: 149px
+}
+.label7--{
+    width: 80%;
+}
+.notes-box {
+  width: 686px;
+  height: 104px;
+  font-size: 22px;
+  padding: 12px;
+  resize: none; /* disables resizing */
+  box-sizing: border-box;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px; /* optional for inner padding */
+  }
+  
+  .cancel,
+  .submit,
+  .reset {
+    width: 180px;
+    height: 53px;
+    font-size: 18px;
+    background: #E2E2E2;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #42515F;
+  }
+  
+  /* Optional: add spacing between buttons */
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-left: 149px;
+    padding-right: 116px;
+    margin-top: 2px;
+    
+  }
+  
+  .right-buttons {
+    display: flex;
+    gap: 20px;
+    
+  }
+
+  .one, .two, .three, .four, .five, .six, .seven {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px; /* <- This creates spacing between question and input */
+  }
+  
+
+ 

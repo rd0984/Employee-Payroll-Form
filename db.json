@@ -1,0 +1,68 @@
+{
+  "employee": [
+    {
+      "id": "1750418658675",
+      "name": "RameshKumar",
+      "profile": "https://i.pravatar.cc/40?img=1",
+      "gender": "Male",
+      "department": [
+        "HR"
+      ],
+      "salary": "₹40000",
+      "startdate": "16 February 2020",
+      "notes": "I'm very responsible person"
+    },
+    {
+      "id": "4896",
+      "name": "Nithin",
+      "profile": "https://i.pravatar.cc/40?img=1",
+      "gender": "Male",
+      "department": [
+        "HR",
+        "Sales",
+        "Finance",
+        "Engineer"
+      ],
+      "salary": "₹70000",
+      "startdate": "10 September 2025",
+      "notes": "I'm very dedicative"
+    },
+    {
+      "id": "5beb",
+      "name": "JayaKousalya",
+      "profile": "https://i.pravatar.cc/40?img=2",
+      "gender": "Female",
+      "department": [
+        "Sales",
+        "Others"
+      ],
+      "salary": "₹60000",
+      "startdate": "5 October 2024",
+      "notes": "I'm very good at work"
+    },
+    {
+      "id": "162b",
+      "name": "Sahana ",
+      "profile": "https://i.pravatar.cc/40?img=2",
+      "gender": "Female",
+      "department": [
+        "Finance"
+      ],
+      "salary": "₹70000",
+      "startdate": "27 November 2024",
+      "notes": "I'm crazy"
+    },
+    {
+      "id": "e968",
+      "name": "Sanjay",
+      "profile": "https://i.pravatar.cc/40?img=4",
+      "gender": "Male",
+      "department": [
+        "Engineer"
+      ],
+      "salary": "₹50000",
+      "startdate": "10 December 2020",
+      "notes": "I'm a frog"
+    }
+  ]
+}

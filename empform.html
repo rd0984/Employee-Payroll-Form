@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Form.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="flex-container">
+            <div class="header">
+              <div class="logo" style="margin-top: 32px; margin-bottom: 22px; padding-left: 188px">
+                <img src="https://img.icons8.com/ios-filled/50/82A70C/employee-card.png" alt="" width="50" height="47">
+              </div>
+              <div class="heading" style="margin-top: 32px; margin-bottom: 22px">
+                <span class="employee" style="color: #82A70C"> EMPLOYEE</span><br>
+                <span class="payroll" style="color:#42515F">PAYROLL</span>
+              </div>
+            </div>     
+        </div>
+    </header>
+
+        <section>
+            <div class="inner-container">
+                <div class="form-content">
+                    <form id="form"> 
+
+            <div class="head-child">        
+                  <div class="title">
+                     <h2>Employee Payroll Form</h2>
+                  </div>
+           </div> 
+
+
+
+            <div class="one">
+
+                     <div id="id1">
+                        <label class="label1">
+                             Name 
+                        </label>
+                    </div>
+
+                 <div id="id2">
+                    <input class="input1" type="text" required>
+
+                </div>
+
+            </div>
+
+
+            <br>
+            <div class="two">
+                <div id="id3">
+                     <label class="label2-">
+                         Profile image 
+                     </label>
+                 </div>
+                
+                <div id="id4">
+                    <div class="label2--">
+                      <label class="radio-profile">
+                        <input type="radio" name="profile" value="https://i.pravatar.cc/40?img=1">
+                        <img src="https://i.pravatar.cc/40?img=1">
+                      </label>
+                      <label class="radio-profile">
+                        <input type="radio" name="profile" value="https://i.pravatar.cc/40?img=2">
+                        <img src="https://i.pravatar.cc/40?img=2">
+                      </label>
+                      <label class="radio-profile">
+                        <input type="radio" name="profile" value="https://i.pravatar.cc/40?img=3">
+                        <img src="https://i.pravatar.cc/40?img=3">
+                      </label>
+                      <label class="radio-profile">
+                        <input type="radio" name="profile" value="https://i.pravatar.cc/40?img=4">
+                        <img src="https://i.pravatar.cc/40?img=4">
+                      </label>
+                    </div>
+                </div>
+            </div>      
+
+
+            <br>
+            <div class="three">
+                <div id="id5">
+                     <label class="label3-">
+                       Gender
+                    </label>
+                </div>
+                <div id="id6">
+                    <label class="label3--">
+                     <input type="radio" name="gender" value="male"> Male
+                     <input type="radio" name="gender" value="female"> Female
+                    </label>
+                </div>
+            </div>
+
+
+
+            <br/>
+            <div class="four">
+                <div id="id7">
+                    <label class="label4-" aria-required="true">
+                        Department
+                    </label>
+                </div>
+                <div id="id8">
+                    <label class="label4--">
+                        <input type="checkbox" value="HR"><span class="dept-label">HR</span>
+                        <input type="checkbox" value="Sales"><span class="dept-label">Sales</span>
+                        <input type="checkbox" value="Finance"><span class="dept-label">Finance</span>
+                        <input type="checkbox" value="Engineer"><span class="dept-label">Engineer</span>
+                        <input type="checkbox" value="Others"><span class="dept-label">Others</span>
+
+                    </label>
+                </div>
+            </div>            
+
+
+            <br>
+            <div class="five">
+                <div id="id9">
+                    <label class="label5-">Salary</label>
+                </div>
+                <div id="id10">
+                    <label class="label5--">
+                        <select required class="salary-select">
+                            <option value="" disabled selected class="placeholder-option">Select Salary</option>
+                            <option>₹30000</option>
+                            <option>₹40000</option>
+                            <option>₹50000</option>
+                            <option>₹60000</option>
+                            <option>₹70000</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            
+
+
+
+            <br>
+            <div class="six">
+                <div id="id11">
+                    <label class="label6-">Start date</label>
+                </div>
+                <div id="id12" class="start-date-container">
+                    <input type="number" min="1" max="31" placeholder="Day" class="date-input">
+                    
+                    <select class="date-input">
+                        <option value="" disabled selected>Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    
+                    <input type="number" min="1990" max="2050" placeholder="Year" class="date-input">
+                </div>
+            </div>
+            
+
+
+            <br>
+            <div class="seven">
+                <div id="id13">
+                    <label class="label7-">Notes</label>
+                </div>
+
+                <div id="id14">
+                    <label class="label7--">
+                        <textarea rows="2" placeholder="Text here...." class="notes-box"></textarea>
+                    </label>
+                </div>
+            </div>
+
+
+            <br><br>
+            <div class="form-buttons">
+                <button type="button" class="cancel">
+                    Cancel
+                </button>
+                <div class="right-buttons">
+                    <button type="submit" class="submit">Submit</button>
+                    <button type="reset" class="reset">Reset</button>
+                </div>
+            </div>
+        </form>   
+
+         </div>
+        </div>
+          
+   
+        </section>
+    <script src="connect.js"></script>
+</body>
+</html>
